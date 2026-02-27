@@ -1,0 +1,225 @@
+/* ===== Guardian Approvals Styles ===== */
+
+.gappr-page {
+    padding-bottom: var(--space-16);
+}
+
+.ga-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.ga-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.ga-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.ga-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.ga-pending-count {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--warning);
+}
+
+.ga-filters {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.ga-filter {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.ga-filter.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.ga-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.ga-card {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    animation: fadeInUp 0.3s ease;
+}
+
+.ga-card.approved {
+    opacity: 0.65;
+}
+
+.ga-card.rejected {
+    opacity: 0.5;
+}
+
+.ga-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.ga-avatar {
+    font-size: 1.5rem;
+}
+
+.ga-card-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ga-card-body {
+    flex: 1;
+}
+
+.ga-card-top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: 2px;
+}
+
+.ga-child-name {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.ga-type-badge {
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.ga-card-body h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.ga-detail {
+    display: block;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 2px;
+}
+
+.ga-time {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.ga-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ga-act {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: none;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.ga-act.approve {
+    background: rgba(0, 184, 148, 0.08);
+    color: var(--success);
+}
+
+.ga-act.approve:hover {
+    background: var(--success);
+    color: white;
+}
+
+.ga-act.reject {
+    background: rgba(225, 112, 85, 0.08);
+    color: var(--danger);
+}
+
+.ga-act.reject:hover {
+    background: var(--danger);
+    color: white;
+}
+
+.ga-resolved {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+}
+
+.ga-resolved.approved {
+    color: var(--success);
+}
+
+.ga-resolved.rejected {
+    color: var(--danger);
+}
+
+.ga-empty {
+    text-align: center;
+    padding: var(--space-8);
+    font-size: var(--fs-sm);
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+@media (max-width: 640px) {
+    .ga-toolbar {
+        flex-direction: column;
+        gap: var(--space-2);
+        align-items: flex-start;
+    }
+
+    .ga-card {
+        flex-direction: column;
+    }
+}

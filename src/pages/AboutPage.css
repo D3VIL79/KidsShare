@@ -1,0 +1,235 @@
+/* ===== About Page Styles ===== */
+
+.about-page {
+    padding-bottom: var(--space-16);
+}
+
+.abt-hero {
+    text-align: center;
+    padding: var(--space-10) 0 var(--space-6);
+    animation: fadeInDown 0.5s ease;
+}
+
+.abt-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--primary);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+
+.abt-hero h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 600px;
+    margin: 0 auto var(--space-3);
+}
+
+.abt-gradient {
+    background: linear-gradient(135deg, #6C5CE7, #00CEC9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.abt-hero p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.abt-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    animation: fadeInUp 0.4s ease;
+}
+
+.abt-stat {
+    text-align: center;
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+}
+
+.abt-stat strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.abt-stat span {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+.abt-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-5);
+}
+
+.abt-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+
+.abt-section>p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.abt-values-section {
+    margin-bottom: var(--space-5);
+}
+
+.abt-values-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.abt-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+.abt-value-card {
+    padding: var(--space-5);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    text-align: center;
+}
+
+.abt-val-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-3);
+}
+
+.abt-value-card h3 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.abt-value-card p {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+}
+
+.abt-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+}
+
+.abt-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.abt-step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.abt-step span:last-child {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.abt-team-section {
+    margin-bottom: var(--space-5);
+}
+
+.abt-team-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.abt-team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+.abt-team-card {
+    text-align: center;
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+}
+
+.abt-team-emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-2);
+}
+
+.abt-team-card h4 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.abt-team-card span {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+
+    .abt-stats,
+    .abt-values,
+    .abt-steps,
+    .abt-team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

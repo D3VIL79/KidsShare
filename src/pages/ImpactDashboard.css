@@ -1,0 +1,285 @@
+/* ===== Impact Dashboard Styles ===== */
+
+.impact-page {
+    padding-bottom: var(--space-16);
+}
+
+.imp-hero {
+    text-align: center;
+    padding: var(--space-8) 0 var(--space-5);
+    animation: fadeInDown 0.5s ease;
+}
+
+.imp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: rgba(0, 184, 148, 0.08);
+    color: var(--success);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.imp-hero h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.imp-gradient {
+    background: linear-gradient(135deg, #00b894, #00CEC9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imp-hero p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.imp-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    animation: fadeInUp 0.4s ease;
+}
+
+.imp-stat-card {
+    text-align: center;
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+}
+
+.imp-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-2);
+}
+
+.imp-stat-card strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.imp-stat-label {
+    display: block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.imp-stat-desc {
+    display: block;
+    font-size: 10px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.imp-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    margin-bottom: var(--space-5);
+}
+
+.imp-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.imp-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.imp-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-3);
+    height: 160px;
+}
+
+.imp-bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.imp-bar-val {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 3px;
+}
+
+.imp-bar {
+    width: 100%;
+    max-width: 32px;
+    background: linear-gradient(to top, #00b894, rgba(0, 184, 148, 0.4));
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: height 0.6s ease;
+}
+
+.imp-bar-label {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    margin-top: 3px;
+}
+
+.imp-cats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.imp-cat-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.imp-cat-name {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    min-width: 130px;
+    color: var(--text-secondary);
+}
+
+.imp-cat-bar {
+    flex: 1;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--bg-hover);
+    overflow: hidden;
+}
+
+.imp-cat-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.6s ease;
+}
+
+.imp-cat-count {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    min-width: 40px;
+    text-align: right;
+}
+
+.imp-milestones {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.imp-milestones h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.imp-ml-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.imp-ml {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.imp-ml-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.imp-ml.done .imp-ml-dot {
+    background: var(--success);
+}
+
+.imp-ml.pending .imp-ml-dot {
+    background: var(--border-color);
+}
+
+.imp-ml-target {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.imp-ml-date {
+    font-size: 11px;
+    color: var(--success);
+    font-weight: 600;
+}
+
+.imp-ml-progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+}
+
+.imp-ml-progress div:first-child {
+    width: 100px;
+    height: 5px;
+    border-radius: var(--radius-full);
+    background: var(--bg-hover);
+    overflow: hidden;
+}
+
+.imp-ml-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: var(--primary);
+}
+
+.imp-ml-progress span {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .imp-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imp-layout {
+        grid-template-columns: 1fr;
+    }
+}

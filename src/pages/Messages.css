@@ -1,0 +1,417 @@
+/* ===== Requests Inbox Styles ===== */
+
+.inbox-page {
+    padding-bottom: var(--space-16);
+}
+
+.inbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.inbox-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.inbox-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.inbox-pending-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+/* Filters */
+.inbox-filters {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+    overflow-x: auto;
+}
+
+.inbox-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+}
+
+.inbox-filter.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.inbox-filter-count {
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.inbox-filter.active .inbox-filter-count {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Request Cards */
+.inbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.inbox-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.inbox-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.inbox-card.warned {
+    border-color: rgba(225, 112, 85, 0.3);
+}
+
+.inbox-card.accepted {
+    border-left: 3px solid var(--success);
+}
+
+.inbox-card.rejected {
+    border-left: 3px solid var(--text-tertiary);
+    opacity: 0.7;
+}
+
+/* Trust Warning */
+.trust-warning-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(225, 112, 85, 0.08);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--danger);
+}
+
+.inbox-card-main {
+    padding: var(--space-4);
+}
+
+/* Item row */
+.inbox-item-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.inbox-item-emoji {
+    font-size: 1.2rem;
+}
+
+.inbox-item-title {
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+}
+
+.inbox-item-type {
+    margin-left: auto;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* User row */
+.inbox-user-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.inbox-user-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.inbox-user-avatar {
+    font-size: 1.5rem;
+}
+
+.inbox-user-name {
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 1px;
+}
+
+.inbox-user-meta {
+    display: flex;
+    gap: var(--space-3);
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.inbox-trust {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 600;
+}
+
+.inbox-trust.high {
+    color: var(--success);
+}
+
+.inbox-trust.mid {
+    color: var(--warning);
+}
+
+.inbox-trust.low {
+    color: var(--danger);
+}
+
+.inbox-time {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+/* Message */
+.inbox-message {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-3);
+}
+
+.inbox-message svg {
+    flex-shrink: 0;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.inbox-message p {
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Actions */
+.inbox-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.inbox-main-actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.inbox-accept {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: none;
+    background: var(--success);
+    color: white;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.inbox-accept:hover {
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px rgba(0, 184, 148, 0.3);
+}
+
+.inbox-reject {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.inbox-reject:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.inbox-report {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color);
+    background: transparent;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.inbox-report:hover {
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+/* Guardian */
+.inbox-guardian-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1.5px solid rgba(253, 203, 110, 0.4);
+    background: rgba(253, 203, 110, 0.08);
+    color: var(--warning);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.inbox-guardian-btn:hover {
+    background: rgba(253, 203, 110, 0.15);
+}
+
+.inbox-guardian-sent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--success);
+}
+
+/* Resolved */
+.inbox-resolved {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.inbox-resolved.accepted {
+    background: rgba(0, 184, 148, 0.08);
+    color: var(--success);
+}
+
+.inbox-resolved.rejected {
+    background: rgba(0, 0, 0, 0.03);
+    color: var(--text-tertiary);
+}
+
+/* Empty */
+.inbox-empty {
+    text-align: center;
+    padding: var(--space-16) 0;
+}
+
+.inbox-empty span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-4);
+}
+
+.inbox-empty h3 {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-2);
+}
+
+.inbox-empty p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+@media (max-width: 640px) {
+    .inbox-header {
+        flex-direction: column;
+        gap: var(--space-3);
+        text-align: center;
+    }
+
+    .inbox-user-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .inbox-actions {
+        flex-direction: column;
+    }
+
+    .inbox-main-actions {
+        width: 100%;
+    }
+
+    .inbox-accept,
+    .inbox-reject {
+        flex: 1;
+        justify-content: center;
+    }
+}

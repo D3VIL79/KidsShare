@@ -1,0 +1,376 @@
+/* ===== Wallet Page Styles ===== */
+
+.wallet-page {
+    padding-bottom: var(--space-16);
+}
+
+.wal-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.wal-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.wal-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+/* Balance Card */
+.wal-balance-card {
+    padding: var(--space-6);
+    margin-bottom: var(--space-5);
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.08), rgba(0, 206, 201, 0.06));
+    border: 1px solid rgba(108, 92, 231, 0.12);
+    border-radius: var(--radius-xl);
+    animation: fadeInUp 0.4s ease;
+}
+
+.wal-balance-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.wal-balance-label {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wal-balance-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.wal-balance-amount {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.wal-eye {
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Ring */
+.wal-balance-ring {
+    position: relative;
+    width: 72px;
+    height: 72px;
+}
+
+.wal-balance-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.wal-ring-bg {
+    fill: none;
+    stroke: var(--border-color);
+    stroke-width: 6;
+}
+
+.wal-ring-fill {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.8s ease;
+}
+
+.wal-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    color: var(--text-secondary);
+}
+
+/* Balance Stats */
+.wal-balance-stats {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.wal-bs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    flex: 1;
+}
+
+.wal-bs span {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    display: block;
+}
+
+.wal-bs strong {
+    font-family: var(--font-heading);
+    font-size: var(--fs-base);
+    font-weight: 800;
+}
+
+.wal-bs.earned svg {
+    color: var(--success);
+}
+
+.wal-bs.earned strong {
+    color: var(--success);
+}
+
+.wal-bs.spent svg {
+    color: var(--danger);
+}
+
+.wal-bs.spent strong {
+    color: var(--danger);
+}
+
+/* Layout */
+.wal-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-6);
+}
+
+/* Sections */
+.wal-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.wal-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+
+.wal-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.wal-section-header h2 {
+    margin-bottom: 0;
+}
+
+/* TX Filters */
+.wal-tx-filters {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.wal-tx-filter {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.wal-tx-filter.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Transactions */
+.wal-tx-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.wal-tx {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.wal-tx:hover {
+    background: var(--bg-hover);
+}
+
+.wal-tx-emoji {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.wal-tx-info {
+    flex: 1;
+}
+
+.wal-tx-title {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.wal-tx-date {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.wal-tx-amount {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.wal-tx-amount.earned {
+    color: var(--success);
+}
+
+.wal-tx-amount.spent {
+    color: var(--danger);
+}
+
+/* Spending Limits */
+.wal-age-badge {
+    display: inline-flex;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.wal-limits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.wal-limit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.wal-limit-header span:first-child {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.wal-limit-nums {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.wal-limit-bar {
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.wal-limit-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.6s ease;
+}
+
+.wal-limit-notice {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    background: rgba(253, 203, 110, 0.06);
+    font-size: var(--fs-xs);
+    color: var(--warning);
+}
+
+/* Earn */
+.wal-earn-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.wal-earn-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.wal-earn-item svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.wal-earn-item strong {
+    margin-left: auto;
+    font-family: var(--font-heading);
+    color: var(--success);
+    font-size: var(--fs-xs);
+}
+
+/* Sidebar */
+.wal-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .wal-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .wal-balance-stats {
+        flex-direction: column;
+    }
+
+    .wal-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+}

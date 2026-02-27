@@ -1,0 +1,216 @@
+/* ===== Feedback Page Styles ===== */
+
+.fb-page {
+    padding-bottom: var(--space-16);
+}
+
+.fb-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.fb-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.fb-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.fb-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-6);
+    animation: fadeInUp 0.4s ease;
+}
+
+.fb-form-section,
+.fb-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.fb-form-section h2,
+.fb-sidebar h2 {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.fb-cats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.fb-cat-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.fb-cat-btn.active {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.fb-form-section label {
+    display: block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-1);
+    margin-top: var(--space-3);
+}
+
+.fb-input {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.fb-input:focus {
+    border-color: var(--primary);
+}
+
+.fb-textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.fb-textarea:focus {
+    border-color: var(--primary);
+}
+
+.fb-stars {
+    display: flex;
+    gap: 4px;
+    margin-top: var(--space-1);
+}
+
+.fb-star {
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.fb-star:hover {
+    transform: scale(1.15);
+}
+
+.fb-submit {
+    margin-top: var(--space-4);
+    width: 100%;
+}
+
+.fb-past-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.fb-past-card {
+    padding: var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.fb-past-top {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.fb-past-cat {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.fb-past-card h4 {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+}
+
+.fb-past-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fb-votes {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.fb-fstatus {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+}
+
+.fb-fstatus.implemented,
+.fb-fstatus.fixed {
+    background: rgba(0, 184, 148, 0.08);
+    color: var(--success);
+}
+
+.fb-fstatus.planned {
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--primary);
+}
+
+.fb-fstatus.under-review {
+    background: rgba(253, 203, 110, 0.08);
+    color: var(--warning);
+}
+
+.fb-fstatus.noted {
+    background: var(--bg-hover);
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+    .fb-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fb-cats {
+        grid-template-columns: 1fr;
+    }
+}

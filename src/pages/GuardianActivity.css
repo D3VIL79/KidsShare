@@ -1,0 +1,201 @@
+/* ===== Guardian Activity Log Styles ===== */
+
+.gact-page {
+    padding-bottom: var(--space-16);
+}
+
+.gact-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.gact-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.gact-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.gact-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.gact-search {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-full);
+    max-width: 320px;
+}
+
+.gact-search svg {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.gact-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.gact-filter-group {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gact-child-btns,
+.gact-type-btns {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.gact-child-btn,
+.gact-type-btn {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.gact-child-btn.active,
+.gact-type-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.gact-list {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.gact-row {
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.gact-row:last-child {
+    border-bottom: none;
+}
+
+.gact-row:hover {
+    background: var(--bg-hover);
+}
+
+.gact-row.flagged {
+    background: rgba(225, 112, 85, 0.03);
+    border-left: 3px solid var(--danger);
+}
+
+.gact-row-main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+}
+
+.gact-avatar {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.gact-row-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gact-row-body {
+    flex: 1;
+}
+
+.gact-row-text {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+}
+
+.gact-row-time {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.gact-flag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--danger);
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(225, 112, 85, 0.08);
+    flex-shrink: 0;
+}
+
+.gact-chev {
+    color: var(--text-tertiary);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.gact-chev.rotated {
+    transform: rotate(180deg);
+}
+
+.gact-detail {
+    padding: 0 var(--space-4) var(--space-3) calc(1.2rem + 26px + var(--space-2) * 2 + var(--space-4));
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+    animation: fadeInDown 0.2s ease;
+}
+
+.gact-empty {
+    padding: var(--space-8);
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--text-tertiary);
+}
+
+.gact-count {
+    padding: var(--space-3) 0;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    .gact-filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

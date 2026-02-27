@@ -1,0 +1,68 @@
+﻿
+> kidshare-hub@0.0.0 lint
+> eslint .
+
+
+D:\industry level\src\components\Layout.jsx
+  119:11  error  'location' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\AdminDashboard.jsx
+  1:10  error  'useState' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\AdminReports.jsx
+  27:12  error  'period' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+  27:20  error  'setPeriod' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Dashboard.jsx
+  1:20  error  'useContext' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\GuardianSettings.jsx
+  25:28  error  'setLinkedChildren' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Home.jsx
+  65:13  error  'ageGroup' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Login.jsx
+  29:9   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  27 |     useEffect(() => {
+  28 |         if (step !== 'otp') return
+> 29 |         setTimer(30)
+     |         ^^^^^^^^ Avoid calling setState() directly within an effect
+  30 |         setShowResend(false)
+  31 |         const interval = setInterval(() => {
+  32 |             setTimer((t) => {  react-hooks/set-state-in-effect
+  53:11  error  'handlePhoneChange' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+
+D:\industry level\src\pages\Messages.jsx
+  70:12  error  'expanded' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+  70:22  error  'setExpanded' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Signup.jsx
+   70:8   warning  React Hook useEffect has a missing dependency: 'otpVerified'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+  120:22  error    Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  118 |     const getAge = () => {
+  119 |         if (!form.dob) return null
+> 120 |         const diff = Date.now() - new Date(form.dob).getTime()
+      |                      ^^^^^^^^^^ Cannot call impure function
+  121 |         return Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000))
+  122 |     }
+  123 |  react-hooks/purity
+
+D:\industry level\src\pages\TurfCalendar.jsx
+  77:39  error  'hasPending' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\TurfSlot.jsx
+  49:11  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 15 problems (14 errors, 1 warning)
+

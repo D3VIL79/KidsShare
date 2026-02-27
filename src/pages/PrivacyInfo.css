@@ -1,0 +1,123 @@
+/* ===== Privacy Policy Styles ===== */
+
+.privacy-page {
+    padding-bottom: var(--space-16);
+}
+
+.pp-header {
+    text-align: center;
+    padding: var(--space-8) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.pp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--primary);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.pp-header h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.pp-header p {
+    font-size: var(--fs-sm);
+    color: var(--text-tertiary);
+}
+
+.pp-intro {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+    animation: fadeInUp 0.4s ease;
+}
+
+.pp-intro p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.pp-sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+}
+
+.pp-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.pp-sec-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-3);
+}
+
+.pp-section h2 {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+
+.pp-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.pp-section li {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    padding-left: var(--space-4);
+    position: relative;
+    line-height: 1.6;
+}
+
+.pp-section li::before {
+    content: '•';
+    position: absolute;
+    left: var(--space-1);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.pp-contact {
+    text-align: center;
+    padding: var(--space-5);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+}
+
+.pp-contact h3 {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.pp-contact p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}

@@ -1,0 +1,32 @@
+﻿
+> kidshare-hub@0.0.0 lint
+> eslint .
+
+
+D:\industry level\src\components\Layout.jsx
+  2:33  error  'useLocation' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Home.jsx
+  1:20  error  'useContext' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Login.jsx
+  29:15  error  'timerId' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\industry level\src\pages\Signup.jsx
+  120:22  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  118 |     const age = useMemo(() => {
+  119 |         if (!form.dob) return null
+> 120 |         const diff = Date.now() - new Date(form.dob).getTime()
+      |                      ^^^^^^^^^^ Cannot call impure function
+  121 |         return Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000))
+  122 |     }, [form.dob])
+  123 |  react-hooks/purity
+
+D:\industry level\src\pages\TurfSlot.jsx
+  3:10  error  'useNavigate' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 5 problems (5 errors, 0 warnings)
+

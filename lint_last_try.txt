@@ -1,0 +1,42 @@
+﻿
+> kidshare-hub@0.0.0 lint
+> eslint .
+
+
+D:\industry level\src\pages\Signup.jsx
+   61:9   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  59 |     useEffect(() => {
+  60 |         if (!otpSent || otpVerified) return
+> 61 |         setTimer(30)
+     |         ^^^^^^^^ Avoid calling setState() directly within an effect
+  62 |         setShowResend(false)
+  63 |         const interval = setInterval(() => {
+  64 |             setTimer((t) => {                                                                                            react-hooks/set-state-in-effect
+  120:26  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  118 |     const [age, setAge] = useState(null)
+  119 |     useEffect(() => {
+> 120 |         if (!form.dob) { setAge(null); return }
+      |                          ^^^^^^ Avoid calling setState() directly within an effect
+  121 |         const diff = Date.now() - new Date(form.dob).getTime()
+  122 |         setAge(Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000)))
+  123 |     }, [form.dob])  react-hooks/set-state-in-effect
+
+D:\industry level\src\pages\TurfSlot.jsx
+  4:10  error  'useParams' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 3 problems (3 errors, 0 warnings)
+

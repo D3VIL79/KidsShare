@@ -1,0 +1,1073 @@
+/* ===== Shared Auth Styles (Login + Signup) ===== */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+    padding: var(--space-8) var(--space-4);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* Brand */
+.auth-brand {
+    text-align: center;
+    margin-bottom: var(--space-6);
+    animation: fadeInDown 0.5s ease;
+}
+
+.auth-logo-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: var(--gradient-cta);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: var(--space-4);
+    box-shadow: var(--shadow-glow);
+}
+
+.auth-title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+/* Stepper */
+.auth-stepper {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+}
+
+.stepper-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stepper-bar {
+    height: 4px;
+    border-radius: 99px;
+    background: var(--border-color);
+    margin-bottom: 6px;
+    transition: background var(--transition-base);
+}
+
+.stepper-item.active .stepper-bar {
+    background: var(--primary);
+}
+
+.stepper-item.done .stepper-bar {
+    background: var(--success);
+}
+
+.stepper-label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-tertiary);
+    transition: color var(--transition-base);
+}
+
+.stepper-item.active .stepper-label {
+    color: var(--primary);
+}
+
+.stepper-item.done .stepper-label {
+    color: var(--success);
+}
+
+/* Card */
+.auth-card {
+    padding: var(--space-8) !important;
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Method Selector */
+.auth-method-selector {
+    display: flex;
+    gap: var(--space-2);
+    background: var(--bg-tertiary);
+    padding: 4px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+}
+
+.auth-method-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-full);
+    border: none;
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.auth-method-btn:hover {
+    color: var(--text-primary);
+}
+
+.auth-method-btn.active {
+    background: var(--bg-card);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Fields */
+.auth-field {
+    margin-bottom: var(--space-4);
+}
+
+.auth-field label {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.auth-optional {
+    font-weight: 400;
+    color: var(--text-tertiary);
+    font-size: var(--fs-xs);
+}
+
+.auth-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0 var(--space-4);
+    background: var(--bg-tertiary);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.auth-input-wrap:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.auth-input-icon {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.auth-input-wrap input {
+    flex: 1;
+    padding: var(--space-3) 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: var(--fs-sm);
+    font-family: var(--font-body);
+}
+
+.auth-input-wrap input:disabled {
+    opacity: 0.6;
+}
+
+/* Phone */
+.auth-phone-input {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+}
+
+.auth-phone-prefix {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-right: 8px;
+    border-right: 1px solid var(--border-color);
+}
+
+.auth-phone-input input {
+    flex: 1;
+    padding: var(--space-3) 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: var(--fs-sm);
+    font-family: var(--font-body);
+    letter-spacing: 1px;
+}
+
+/* Hints */
+.auth-hint {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+    margin-top: 6px;
+}
+
+.auth-hint.warning {
+    color: var(--warning);
+}
+
+.auth-hint.muted {
+    color: var(--text-tertiary);
+}
+
+/* Toggle Password */
+.auth-toggle-pass {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.auth-toggle-pass:hover {
+    color: var(--text-primary);
+}
+
+/* Verified Icon */
+.auth-verified-icon {
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+/* Notices */
+.auth-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+    background: rgba(108, 92, 231, 0.06);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.auth-notice svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--primary);
+}
+
+.auth-notice.warning {
+    background: rgba(253, 203, 110, 0.12);
+}
+
+.auth-notice.warning svg {
+    color: var(--warning);
+}
+
+.auth-notice.danger {
+    background: rgba(225, 112, 85, 0.1);
+    color: var(--danger);
+}
+
+.auth-notice.danger svg {
+    color: var(--danger);
+}
+
+/* OTP Send Button */
+.auth-otp-send-btn {
+    width: 100%;
+    margin-bottom: var(--space-2);
+}
+
+/* OTP Inline */
+.auth-otp-inline {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+    animation: fadeInUp 0.3s ease;
+}
+
+.auth-otp-inline-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+}
+
+/* OTP Step (Login) */
+.auth-otp-step {
+    text-align: center;
+    animation: fadeInUp 0.4s ease;
+}
+
+.auth-otp-header {
+    margin-bottom: var(--space-6);
+}
+
+.auth-otp-icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.12), rgba(0, 206, 201, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+    color: var(--primary);
+}
+
+.auth-otp-step h3 {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-2);
+}
+
+.auth-otp-step p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+}
+
+/* OTP Boxes */
+.otp-boxes {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-4);
+}
+
+.otp-box {
+    width: 46px;
+    height: 52px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+    outline: none;
+    transition: all var(--transition-fast);
+    caret-color: var(--primary);
+}
+
+.otp-box:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
+    background: var(--bg-card);
+}
+
+.otp-box.filled {
+    border-color: var(--primary-light);
+    background: rgba(108, 92, 231, 0.05);
+}
+
+/* Timer */
+.auth-otp-timer {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+.auth-resend-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.auth-resend-btn:hover {
+    color: var(--primary-dark);
+}
+
+/* Verified Banner */
+.auth-verified-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background: rgba(0, 184, 148, 0.1);
+    color: var(--success);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    animation: bounceIn 0.4s ease;
+}
+
+/* Submit */
+.auth-submit {
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
+/* Back Button */
+.auth-back-btn {
+    width: 100%;
+    margin-top: var(--space-3);
+}
+
+/* Success */
+.auth-success {
+    text-align: center;
+    padding: var(--space-4) 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.auth-success-icon {
+    color: var(--success);
+    margin-bottom: var(--space-4);
+    animation: bounceIn 0.5s ease;
+}
+
+.auth-success h3 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-2);
+}
+
+.auth-success p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-6);
+}
+
+/* Nav */
+.auth-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+}
+
+/* Footer */
+.auth-footer-text {
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    margin-top: var(--space-4);
+}
+
+.auth-footer-text a {
+    font-weight: 600;
+}
+
+.auth-safety-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    margin-top: var(--space-4);
+}
+
+/* ------ Age Step ------ */
+.auth-age-step {
+    animation: fadeInUp 0.4s ease;
+}
+
+.auth-step-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.auth-step-title.centered {
+    justify-content: center;
+}
+
+.auth-step-desc {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+.auth-step-desc.centered {
+    text-align: center;
+}
+
+.auth-age-result {
+    animation: fadeInUp 0.4s ease;
+}
+
+.age-result-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 1.5px solid var(--success);
+    border-radius: var(--radius-md);
+    background: rgba(0, 184, 148, 0.04);
+    margin-bottom: var(--space-4);
+}
+
+.age-result-emoji {
+    font-size: 2rem;
+}
+
+.age-result-info {
+    flex: 1;
+}
+
+.age-result-range {
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.age-result-desc {
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+}
+
+/* Demo Roles */
+.auth-roles-demo {
+    margin: var(--space-4) 0;
+    text-align: center;
+}
+
+.roles-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-2);
+}
+
+.roles-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.role-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.role-btn.guardian {
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+}
+
+.role-btn.guardian:hover {
+    background: rgba(108, 92, 231, 0.2);
+}
+
+.role-btn.admin {
+    background: rgba(45, 52, 54, 0.1);
+    color: var(--text-primary);
+}
+
+.role-btn.admin:hover {
+    background: rgba(45, 52, 54, 0.2);
+}
+
+/* ------ Password Strength ------ */
+.password-strength {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+.strength-bars {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+}
+
+.strength-bar {
+    height: 4px;
+    flex: 1;
+    border-radius: 99px;
+    transition: background var(--transition-base);
+}
+
+.strength-label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    min-width: 40px;
+    text-align: right;
+}
+
+/* ------ Guardian Step ------ */
+.auth-guardian-step {
+    text-align: center;
+    animation: fadeInUp 0.4s ease;
+}
+
+.auth-guardian-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(253, 121, 168, 0.15), rgba(253, 203, 110, 0.15));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+    color: var(--accent);
+}
+
+.auth-guardian-step .auth-field {
+    text-align: left;
+}
+
+/* ------ Spinner ------ */
+.spin {
+    animation: rotate 1s linear infinite;
+}
+
+/* ------ Responsive ------ */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: var(--space-6) !important;
+    }
+
+    .otp-box {
+        width: 40px;
+        height: 46px;
+        font-size: var(--fs-lg);
+    }
+
+    .auth-method-btn {
+        font-size: 11px;
+        padding: var(--space-2);
+    }
+}
+
+/* ======================================================
+   BOOK LOGIN — Page-Turn Animation
+   ====================================================== */
+
+/* Page background */
+.book-login-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-8) var(--space-4);
+}
+
+.book-bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+}
+.book-bg-orb-1 {
+    width: 400px; height: 400px;
+    background: var(--primary);
+    top: -100px; left: -100px;
+    animation: float 8s ease-in-out infinite;
+}
+.book-bg-orb-2 {
+    width: 300px; height: 300px;
+    background: var(--secondary);
+    bottom: -50px; right: -80px;
+    animation: float 10s ease-in-out infinite reverse;
+}
+.book-bg-orb-3 {
+    width: 200px; height: 200px;
+    background: var(--accent);
+    top: 40%; left: 60%;
+    animation: float 12s ease-in-out infinite 2s;
+}
+
+/* Wrapper */
+.book-login-wrapper {
+    max-width: 460px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Brand */
+.book-brand {
+    text-align: center;
+    margin-bottom: var(--space-6);
+    animation: fadeInDown 0.6s ease;
+}
+
+.book-brand-icon {
+    width: 64px; height: 64px;
+    border-radius: var(--radius-xl);
+    background: var(--gradient-cta);
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    color: white;
+    margin-bottom: var(--space-3);
+    box-shadow: var(--shadow-glow);
+    animation: bounceIn 0.8s ease;
+}
+
+.book-brand h1 {
+    font-size: var(--fs-2xl);
+    background: var(--gradient-cta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-1);
+}
+
+.book-brand p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+/* Role Tabs */
+.book-role-tabs {
+    display: flex;
+    position: relative;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 4px;
+    gap: 2px;
+    animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+.book-role-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-3) var(--space-2);
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 2;
+    color: var(--text-secondary);
+}
+
+.book-role-tab:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.book-role-tab.active {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.book-role-tab-emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.book-role-tab:hover .book-role-tab-emoji {
+    transform: scale(1.15);
+}
+
+.book-role-tab-label {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.book-tab-indicator {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    width: calc((100% - 8px - 4px) / 3);
+    height: calc(100% - 8px);
+    border-radius: var(--radius-md);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.4s ease;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Book Container */
+.book-container {
+    position: relative;
+    perspective: 1200px;
+    animation: fadeInUp 0.5s ease 0.3s both;
+}
+
+.book-spine {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    border-radius: 3px 0 0 3px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+
+/* Page Wrapper with flip */
+.book-page-wrapper {
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 0.35s ease;
+}
+
+.book-page-wrapper.flip-right {
+    animation: pageFlipRight 0.7s ease;
+}
+
+.book-page-wrapper.flip-left {
+    animation: pageFlipLeft 0.7s ease;
+}
+
+@keyframes pageFlipRight {
+    0%   { transform: rotateY(0deg); }
+    40%  { transform: rotateY(-95deg); }
+    60%  { transform: rotateY(-95deg); }
+    100% { transform: rotateY(0deg); }
+}
+
+@keyframes pageFlipLeft {
+    0%   { transform: rotateY(0deg); }
+    40%  { transform: rotateY(95deg); }
+    60%  { transform: rotateY(95deg); }
+    100% { transform: rotateY(0deg); }
+}
+
+/* Book Page */
+.book-page {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg),
+                4px 0 8px rgba(0,0,0,0.04),
+                inset -2px 0 4px rgba(0,0,0,0.02);
+    backface-visibility: hidden;
+}
+
+/* Page Header */
+.book-page-header {
+    padding: var(--space-8) var(--space-6) var(--space-6);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: -10%; right: -10%;
+    height: 40px;
+    background: var(--bg-card);
+    border-radius: 50% 50% 0 0;
+}
+
+.book-page-role-icon {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center; justify-content: center;
+    margin: 0 auto var(--space-3);
+    animation: bounceIn 0.6s ease 0.4s both;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.book-page-header h2 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-1);
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.book-page-header p {
+    font-size: var(--fs-sm);
+    opacity: 0.9;
+}
+
+.book-page-sparkle {
+    position: absolute;
+    top: 12px; right: 16px;
+    opacity: 0.5;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Form */
+.book-page-form {
+    padding: var(--space-6) var(--space-6) var(--space-4);
+}
+
+.book-field {
+    margin-bottom: var(--space-5);
+}
+
+.book-field label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.book-field input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: var(--fs-sm);
+    font-family: var(--font-body);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.book-field input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+    background: var(--bg-card);
+}
+
+.book-field input::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* Login Button */
+.book-login-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-6);
+    border: none;
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-login-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.book-login-btn:hover:not(:disabled)::before { opacity: 1; }
+
+.book-login-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+.book-login-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Page Number */
+.book-page-number {
+    text-align: center;
+    padding: var(--space-2) 0 var(--space-4);
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.book-login-footer {
+    text-align: center;
+    margin-top: var(--space-5);
+    animation: fadeInUp 0.5s ease 0.5s both;
+}
+
+.book-login-footer p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.book-login-footer a {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.book-safety-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .book-login-wrapper {
+        max-width: 100%;
+    }
+
+    .book-page-header {
+        padding: var(--space-6) var(--space-4) var(--space-4);
+    }
+
+    .book-page-form {
+        padding: var(--space-4);
+    }
+
+    .book-role-tab-emoji {
+        font-size: 1.2rem;
+    }
+
+    .book-page-role-icon {
+        width: 56px; height: 56px;
+    }
+}

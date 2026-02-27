@@ -1,0 +1,348 @@
+/* ===== Turf Slot Details Styles ===== */
+
+.turfslot-page {
+    padding-bottom: var(--space-16);
+}
+
+.ts-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.ts-emoji {
+    font-size: 2.5rem;
+}
+
+.ts-header h1 {
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.ts-meta {
+    display: flex;
+    gap: var(--space-3);
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+.ts-meta span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Layout */
+.ts-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-6);
+    animation: fadeInUp 0.4s ease;
+}
+
+/* Sections */
+.ts-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.ts-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+/* Slot Card */
+.ts-slot-card {
+    margin-bottom: var(--space-4);
+}
+
+.ts-slot-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.ts-slot-header h3 {
+    font-size: var(--fs-lg);
+    font-weight: 800;
+}
+
+.ts-slot-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.ts-slot-badge {
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ts-slot-badge.filling {
+    background: rgba(253, 203, 110, 0.1);
+    color: var(--warning);
+}
+
+.ts-slot-badge.available {
+    background: rgba(0, 184, 148, 0.1);
+    color: var(--success);
+}
+
+.ts-slot-badge.full {
+    background: rgba(225, 112, 85, 0.1);
+    color: var(--danger);
+}
+
+/* Availability */
+.ts-availability {
+    margin-bottom: var(--space-3);
+}
+
+.ts-avail-bar {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-2);
+}
+
+.ts-avail-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success), var(--primary));
+    border-radius: var(--radius-full);
+    transition: width 0.6s ease;
+}
+
+.ts-avail-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+}
+
+.ts-spots-left {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.ts-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-hover);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.ts-price-row strong {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    color: var(--primary);
+}
+
+/* Join */
+.ts-join-btn {
+    width: 100%;
+    margin-top: var(--space-3);
+}
+
+.ts-joined-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: var(--space-3);
+    background: rgba(0, 184, 148, 0.06);
+    border: 1px solid rgba(0, 184, 148, 0.15);
+    border-radius: var(--radius-lg);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--success);
+    margin-top: var(--space-3);
+}
+
+/* Participants */
+.ts-participants {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.ts-participant {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.ts-participant:hover {
+    background: var(--bg-hover);
+}
+
+.ts-p-avatar {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.ts-p-info {
+    flex: 1;
+}
+
+.ts-p-name {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    display: block;
+}
+
+.ts-p-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.ts-p-age {
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: var(--bg-tertiary);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.ts-p-role {
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.ts-empty-spots {
+    text-align: center;
+    padding: var(--space-3);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+/* Rules */
+.ts-rules {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.ts-rule {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.ts-rule-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Age Rules */
+.ts-age-rules {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.ts-age-card {
+    padding: var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.ts-age-card.current {
+    border-color: var(--age-color);
+    background: color-mix(in srgb, var(--age-color) 3%, transparent);
+}
+
+.ts-age-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.ts-age-label {
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ts-you-badge {
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.ts-age-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ts-age-list li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+}
+
+/* Age Notice */
+.ts-age-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(253, 203, 110, 0.06);
+    border: 1px solid rgba(253, 203, 110, 0.15);
+    font-size: var(--fs-xs);
+    color: var(--warning);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .ts-layout {
+        grid-template-columns: 1fr;
+    }
+}

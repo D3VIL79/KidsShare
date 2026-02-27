@@ -1,0 +1,404 @@
+/* ===== Sell Item Page Styles ===== */
+
+.sell-page {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-12);
+    max-width: 720px;
+}
+
+.sell-header {
+    margin-bottom: var(--space-5);
+    animation: fadeInDown 0.4s ease;
+}
+
+.sell-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.sell-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-2);
+}
+
+.sell-age-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Gate */
+.sell-gate {
+    text-align: center;
+    padding: var(--space-16) 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.sell-gate-icon {
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-4);
+}
+
+.sell-gate h2 {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.sell-gate p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.sell-gate-sub {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-5);
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+/* Success */
+.sell-success {
+    text-align: center;
+    padding: var(--space-16) 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.sell-success-icon {
+    color: var(--success);
+    margin-bottom: var(--space-4);
+    animation: bounceIn 0.5s ease;
+}
+
+.sell-success h2 {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.sell-success p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.sell-success-sub {
+    margin-top: var(--space-2);
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+/* Sections */
+.sell-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+    animation: fadeInUp 0.4s ease;
+}
+
+.sell-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+
+.sell-hint {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    margin-top: -8px;
+    margin-bottom: var(--space-3);
+}
+
+/* Fields */
+.sell-field {
+    margin-bottom: var(--space-3);
+}
+
+.sell-field label {
+    display: block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.sell-input {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.sell-input:focus {
+    border-color: var(--primary);
+}
+
+.sell-textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    transition: border-color var(--transition-fast);
+}
+
+.sell-textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Condition */
+.condition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-2);
+}
+
+.condition-card {
+    position: relative;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.condition-card:hover {
+    border-color: var(--primary-light);
+}
+
+.condition-card.active {
+    border-color: var(--primary);
+    background: rgba(108, 92, 231, 0.04);
+}
+
+.condition-stars {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 4px;
+}
+
+.condition-card h4 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: 1px;
+}
+
+.condition-card p {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    line-height: 1.4;
+}
+
+.condition-check {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    color: var(--primary);
+}
+
+/* Price */
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.price-row .sell-field {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.price-arrow {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.price-suggested {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-4);
+    background: rgba(0, 184, 148, 0.06);
+    border: 1.5px solid rgba(0, 184, 148, 0.15);
+    border-radius: var(--radius-xl);
+    min-width: 140px;
+}
+
+.price-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    margin-bottom: 2px;
+}
+
+.price-amount {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: 800;
+    color: var(--success);
+}
+
+.price-discount {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.price-insight {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    background: rgba(108, 92, 231, 0.04);
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
+}
+
+.price-insight svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+/* Delivery */
+.delivery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.delivery-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.delivery-card:hover {
+    border-color: var(--del-color);
+}
+
+.delivery-card.active {
+    border-color: var(--del-color);
+    background: color-mix(in srgb, var(--del-color) 4%, transparent);
+}
+
+.delivery-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.delivery-card h4 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1px;
+}
+
+.delivery-card p {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.delivery-badge {
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 184, 148, 0.1);
+    color: var(--success);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.delivery-check {
+    position: absolute;
+    top: 50%;
+    right: var(--space-3);
+    transform: translateY(-50%);
+    color: var(--primary);
+}
+
+.meetup-field {
+    margin-top: var(--space-3);
+}
+
+.meetup-safety {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: var(--space-2);
+    font-size: var(--fs-xs);
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* Safety */
+.sell-safety-notice {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(253, 203, 110, 0.06);
+    border: 1px solid rgba(253, 203, 110, 0.15);
+    font-size: var(--fs-xs);
+    color: var(--warning);
+}
+
+/* Submit */
+.sell-submit {
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .condition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-row {
+        flex-direction: column;
+    }
+
+    .price-arrow {
+        transform: rotate(90deg);
+    }
+}

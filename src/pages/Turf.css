@@ -1,0 +1,447 @@
+/* ===== Turf Discovery Page Styles ===== */
+
+.turf-page {
+    padding-bottom: var(--space-16);
+}
+
+.turf-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.turf-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.turf-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+/* Grid */
+.turf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    animation: fadeInUp 0.4s ease;
+}
+
+/* Card */
+.turf-card {
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-spring);
+}
+
+.turf-card:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.turf-card.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.turf-card-top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.turf-card-image-wrap {
+    width: 100%;
+    height: 160px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-3);
+    position: relative;
+    background: var(--bg-secondary);
+}
+
+.turf-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.turf-card:hover .turf-card-img {
+    transform: scale(1.05);
+}
+
+.turf-card-type-badge {
+    position: absolute;
+    bottom: var(--space-2);
+    left: var(--space-2);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+.turf-card-info {
+    flex: 1;
+}
+
+.turf-card-info h3 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: 1px;
+}
+
+.turf-card-type {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+.turf-card-price {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.turf-card-price small {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+.turf-card-meta {
+    display: flex;
+    gap: var(--space-3);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.turf-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.turf-facilities {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.turf-facility {
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 206, 201, 0.06);
+    color: #00CEC9;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Slots Section */
+.turf-slots-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    animation: fadeInUp 0.4s ease;
+}
+
+.turf-slots-section h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-4);
+}
+
+.turf-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: var(--space-2);
+}
+
+.turf-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.turf-slot:hover:not(:disabled) {
+    border-color: var(--primary-light);
+}
+
+.turf-slot.selected {
+    border-color: var(--primary);
+    background: rgba(108, 92, 231, 0.06);
+}
+
+.turf-slot.booked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.turf-slot.filling {
+    border-color: rgba(253, 203, 110, 0.4);
+}
+
+.turf-slot-time {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.turf-slot-status {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.turf-slot.selected .turf-slot-status {
+    color: var(--primary);
+}
+
+.turf-slot.booked .turf-slot-status {
+    color: var(--danger);
+}
+
+.turf-slot.filling .turf-slot-status {
+    color: var(--warning);
+}
+
+.turf-legend {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+}
+
+.turf-legend span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.leg-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.leg-dot.open {
+    background: var(--success);
+}
+
+.leg-dot.filling {
+    background: var(--warning);
+}
+
+.leg-dot.booked {
+    background: var(--danger);
+    opacity: 0.5;
+}
+
+/* Price Split */
+.turf-split-section {
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-light);
+    animation: fadeInUp 0.3s ease;
+}
+
+.turf-split-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-4);
+}
+
+.split-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.split-label {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.split-counter {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.split-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.split-btn:hover:not(:disabled) {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.split-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.split-num {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    min-width: 36px;
+    text-align: center;
+}
+
+.split-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    padding: var(--space-4);
+    background: var(--bg-hover);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-3);
+}
+
+.split-total,
+.split-per {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.split-total span,
+.split-per span {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 2px;
+}
+
+.split-total strong {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+}
+
+.split-divider {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    color: var(--text-tertiary);
+}
+
+.split-highlight {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: 800;
+    color: var(--success);
+}
+
+.split-savings {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-2) var(--space-3);
+    margin-bottom: var(--space-4);
+    border-radius: var(--radius-md);
+    background: rgba(0, 184, 148, 0.06);
+    font-size: var(--fs-xs);
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* Book Area */
+.turf-book-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.turf-book-btn {
+    width: 100%;
+}
+
+.turf-book-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+}
+
+/* Success */
+.turf-success {
+    text-align: center;
+    padding: var(--space-12) 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.turf-success-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-3);
+}
+
+.turf-success h2 {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.turf-success p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+@media (max-width: 640px) {
+    .turf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .turf-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split-visual {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+}

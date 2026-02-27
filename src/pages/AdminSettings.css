@@ -1,0 +1,191 @@
+/* ===== Admin Settings Styles ===== */
+
+.aset-page {
+    padding-bottom: var(--space-16);
+}
+
+.as-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.as-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.as-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.as-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-5);
+    animation: fadeInUp 0.4s ease;
+}
+
+.as-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.as-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+/* Age Table */
+.as-age-table {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.as-age-head {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 0.7fr) 1fr;
+    padding: var(--space-2) var(--space-3);
+    background: var(--bg-hover);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.as-age-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 0.7fr) 1fr;
+    padding: var(--space-3);
+    border-top: 1px solid var(--border-light);
+    font-size: var(--fs-sm);
+    align-items: center;
+}
+
+.as-age-group {
+    font-weight: 700;
+}
+
+.as-yes {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.as-no {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+/* Fees */
+.as-fee-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.as-fee-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-2) 0;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.as-fee-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.as-fee-input {
+    width: 70px;
+    padding: var(--space-2);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+    text-align: right;
+}
+
+.as-fee-input:focus {
+    border-color: var(--primary);
+}
+
+.as-fee-unit {
+    font-size: var(--fs-xs);
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+/* Toggles */
+.as-toggle-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.as-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: background var(--transition-fast);
+}
+
+.as-toggle-row:hover {
+    background: var(--bg-hover);
+}
+
+.as-toggle-row h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.as-toggle-row p {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.as-tog {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.as-save {
+    margin: 0 auto;
+    display: flex;
+    min-width: 200px;
+}
+
+.as-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .as-layout {
+        grid-template-columns: 1fr;
+    }
+}

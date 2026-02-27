@@ -1,0 +1,279 @@
+/* ===== Guardian Settings Styles ===== */
+
+.gset-page {
+    padding-bottom: var(--space-16);
+}
+
+.gs-header {
+    padding: var(--space-6) 0 var(--space-4);
+    animation: fadeInDown 0.4s ease;
+}
+
+.gs-header h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-2xl);
+    margin-bottom: 2px;
+}
+
+.gs-header p {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.gs-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-5);
+    animation: fadeInUp 0.4s ease;
+}
+
+.gs-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.gs-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-base);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+/* Notifications */
+.gs-notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.gs-notif-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: background var(--transition-fast);
+}
+
+.gs-notif-row:hover {
+    background: var(--bg-hover);
+}
+
+.gs-notif-row h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1px;
+}
+
+.gs-notif-row p {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.gs-critical-tag {
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: var(--radius-full);
+    background: rgba(225, 112, 85, 0.08);
+    color: var(--danger);
+    font-weight: 700;
+}
+
+.gs-tog {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.gs-tog:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Form */
+.gs-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.gs-form label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: var(--space-1);
+}
+
+.gs-input {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.gs-input:focus {
+    border-color: var(--primary);
+}
+
+.gs-relation-btns {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-1);
+}
+
+.gs-rel-btn {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: transparent;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.gs-rel-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Linked Children */
+.gs-linked-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.gs-linked-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.gs-linked-avatar {
+    font-size: 1.3rem;
+}
+
+.gs-linked-card h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.gs-linked-card p {
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+.gs-linked-status {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+.gs-link-new h4 {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.gs-link-input-row {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.gs-link-input-row .gs-input {
+    flex: 1;
+}
+
+.gs-link-btn {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: var(--space-2) var(--space-3);
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--primary);
+    color: white;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.gs-link-btn:disabled {
+    opacity: 0.5;
+}
+
+.gs-link-hint {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: var(--space-2);
+    font-size: 11px;
+    color: var(--text-tertiary);
+}
+
+/* Security */
+.gs-security-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.gs-security-list div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.gs-security-list svg {
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+.gs-save {
+    margin: 0 auto;
+    display: flex;
+    min-width: 180px;
+}
+
+.gs-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .gs-layout {
+        grid-template-columns: 1fr;
+    }
+}
